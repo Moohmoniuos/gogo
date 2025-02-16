@@ -1,0 +1,112 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272b24;
+}
+.ghost{
+    height: 200px;
+    width: 160px;
+    background-color: #f3efda;
+    border-radius: 50% 50% 0 0 ;
+    position: relative;
+    transition: all 1s ease;
+}
+body:hover .ghost{
+    transform: translateY(-50px);
+}
+.l-hand,
+.r-hand{
+    width: 40px;
+    height: 70px;
+    background-color: #f3efda;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+}
+.l-hand{
+    left: -25px;
+    transform: rotate(-30deg);
+}
+.r-hand{
+    right: -25px;
+    transform: rotate(30deg);
+}
+.face{
+    position: absolute;
+    top: 60px;
+    left: 25%;
+}
+.eye{
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 50%;
+    box-shadow: 50px 0px #333;
+    position: relative;
+}
+.eye::after,
+.eye::before{
+    position: absolute;
+    content: " ";
+    width: 30px;
+    height: 10px;
+    background-color: #ffc6ac;
+    border-radius: 50%;
+     top: 35px;
+}
+.eye::after{
+    transform: rotate(-15deg);
+    left: -5px;
+}
+.eye::before{
+    transform: rotate(15deg);
+    left: 55px;
+}
+.mouse{
+    width: 30px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 0 0 100px 100px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.leg,
+.leg::after,
+.leg::before{
+    width: 40px;
+    height: 60px;
+    background-color: #f3efda;
+    position: absolute; 
+    border-radius: 50px;   
+}
+.leg{
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.leg::before{
+    content:" ";
+    right: -60px;
+}
+.leg::after{
+    content: " ";
+    left: -60px;
+}
+.shadow{
+    width: 200px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #191d18;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 1s ease;
+}
+body:hover .shadow{
+transform: translateX(-50%) scale(0.5);
+}
